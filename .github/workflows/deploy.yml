@@ -28,8 +28,8 @@ jobs:
         working-directory: ./terraform
       - name: Terraform Plan
         id: plan
-        run: |
-          terraform plan \
+        run: |  
+          terraform plan -out=PLAN\
           -var="region=eu-north-1" \
           -var="public_key=$PUBLIC_SSH_KEY" \
           -var="private_key=$PRIVATE_SSH_KEY" \
