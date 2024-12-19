@@ -2,7 +2,7 @@ name: CI/CD avec terraform pour le rattrapage de DevSecOps
 on:
   push:
     branches:
-      - CI/CD-DevSecOps
+      - main
 
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
