@@ -28,12 +28,12 @@ jobs:
         working-directory: ./terraform
       - name: Terraform Plan
         id: plan
-        run: |-  
-          terraform plan \
+        run: |-
+          terraform plan -destroy \
           -var="region=eu-north-1" \
           -var="public_key=$PUBLIC_SSH_KEY" \
           -var="private_key=$PRIVATE_SSH_KEY" \
-          -var="key_name=deployer-key"\
+          -var="key_name=deployer-key" \
           -out=PLAN
         working-directory: ./terraform
       - name: Terraform Apply
